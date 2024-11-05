@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./assets/fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="./assets/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/owlcarousel/owl.theme.default.min.css">
+    <script src="./assets/owlcarousel/jquery.min.js"></script>
+    <script src="./assets/owlcarousel/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="./assets/scss/style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <div class="container px-0">
+                <div class="d-flex justify-content-between">
+                    <div class="h__left d-flex justify-content-between align-items-center">
+                        <div class="menuIcon-js">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <div class="searchIcon-js">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <p><b id="dayName-js"></b>&nbsp;<span id="day-Of-Week-js"></span></p>
+                        </div>
+                    </div>
+                    <div class="searchInput-js">
+                        <input type="text" placeholder="Tìm kiếm"><i
+                            class="fa-solid fa-circle-xmark searchIconClose-js"></i>
+                    </div>
+                    <div class="h__mid">
+                        <img src="./assets/img/Logo.png" alt="logo">
+                    </div>
+                    <div class="h__right d-flex align-items-center justify-content-around">
+                        <p><b style="color: #1B75BC;">Hà Nội</b></p>
+                        <p id="weatherCity-js"></p>
+                        <div id="weatherIcon-js">&#9788;</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-menu container-fluid px-0 mega-menu-js">
+                <div class="mega-menu-box container px-0">
+                    <div class="row">
+                        <div class="col-lg-2 mega-menu-child">
+                            <ul>
+                                <p>Chính trị</p>
+                                <li><a href="">Học và làm theo Bác Hồ</a></li>
+                                <li><a href="">Xây dựng Đảng</a></li>
+                                <li><a href="">Đoàn đại biểu Quốc hội - HĐND</a></li>
+                                <li><a href="">Nghị quyết và cuộc sống</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 mega-menu-child">
+                            <ul>
+                                <p>Thời sự</p>
+                                <li><a href="">Thời sự Hà Nội</a></li>
+                                <li><a href="">Dòng chảy thông tin</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 mega-menu-child">
+                            <ul>
+                                <p>Chính sách</p>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 mega-menu-child">
+                            <ul>
+                                <p>Kinh tế</p>
+                                <li><a href="">Nông nghiệp - Nông thôn</a></li>
+                                <li><a href="">Công nghiệp - xây dựng</a></li>
+                                <li><a href="">Thương mại - Dịch vụ</a></li>
+                                <li><a href="">Thuế - Tài chính</a></li>
+                                <li><a href="">Khởi nghiệp</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 mega-menu-child">
+                            <ul>
+                                <p>Văn hóa</p>
+                                <li><a href="">Biển đảo Việt Nam</a></li>
+                                <li><a href="">Đất nước con người</a></li>
+                                <li><a href="">Văn học - Nghệ thuật</a></li>
+                                <li><a href="">Di sản - Truyền thống</a></li>
+                                <li><a href="">Giải trí</a></li>
+                                <li><a href="">Thể thao 360</a></li>
+                                <li><a href="">Tử vi vui</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 mega-menu-child">
+                            <ul>
+                                <p>Quốc phòng - an ninh</p>
+                                <li><a href="">Quốc phòng toàn dân</a></li>
+                                <li><a href="">Vì an ninh Tổ quốc</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-2 mega-menu-child">
+                            <ul>
+                                <p>Đời sống</p>
+                                <li><a href="">Y tế - Sức khỏe</a></li>
+                                <li><a href="">Giáo dục - Đào tạo</a></li>
+                                <li><a href="">Việc tử tế</a></li>
+                                <li><a href="">An sinh - Cuộc sống</a></li>
+                                <li><a href="">Nhịp cầu nhân ái</a></li>
+                                <li><a href="">Mẹo vặt</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 mega-menu-child">
+                            <ul>
+                                <p>Pháp luật</p>
+                                <li><a href="">Trật tự</a></li>
+                                <li><a href="">Pháp luật - Đời sống</a></li>
+                                <li><a href="">Nhịp cầu bạn đọc</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 mega-menu-child">
+                            <ul>
+                                <p>Công nghệ</p>
+                                <li><a href="">Khoa học</a></li>
+                                <li><a href="">Công nghệ thông tin</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 mega-menu-child">
+                            <ul>
+                                <p>Văn nghệ</p>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 mega-menu-child">
+                            <ul>
+                                <p>Đất và người Hà Nội</p>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 mega-menu-child">
+                            <ul>
+                                <p>Video</p>
+                                <li><a href="">Tin tức Hà Nội</a></li>
+                                <li><a href="">Thời sự</a></li>
+                                <li><a href="">Phóng sự</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid h-row_2">
+                <div class="container px-0">
+                    <ul class="h_nav d-flex justify-content-between">
+                        <i class="fa-solid fa-house"></i>
+                        <li><a href="" class="n-item" style="color: #FF3333;">Tin giáo dục</a></li>
+                        <li><a href="" class="n-item" style="color: #1B75BC;">Giáo dục thể chất</a></li>
+                        <li><a href="" class="n-item" style="color: #E6B300;">Giáo dục kĩ năng</a></li>
+                        <li><a href="" class="n-item" style="color: #00BA36;">Trao đổi - kết nối</a></li>
+                        <li><a href="" class="n-item" style="color: #10A5E8;">Học tập ngoại khóa</a></li>
+                        <li><a href="" class="n-item" style="color: #0D0898;">Văn hóa</a></li>
+                        <li><a href="" class="n-item" style="color: #890CC2;">Nhịp điệu cuộc sống</a></li>
+                        <li><a href="" class="n-item"><i class="fa-solid fa-star"></i>Đa phương tiện</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container h_trend px-0 mt-2 mb-3">
+                <ul class="d-flex justify-content-between">
+                    <p><i class="fa-solid fa-arrow-trend-up"></i>&nbsp;Xu hướng</p>
+                    <li><a href="">#&nbsp;Thảm họa lũ quét Làng Nủ</a></li>
+                    <li><a href="">#&nbsp;Chung tay cứu trợ đồng bào miền Bắc trong lũ dữ</a></li>
+                    <li><a href="">#&nbsp;Thảm họa lũ quét Làng Nủ</a></li>
+                    <li><a href="">#&nbsp;Chung tay cứu trợ đồng bào miền Bắc trong lũ dữ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="b_body">
+            <div class="b_prominent container px-0">
+                <div class="b_top d-flex justify-content-between mb-4">
+                    <div class="col_left">
+                        <a href="">
+                            <img src="./assets/upload/b_prominent/anh1.png" alt="">
+                        </a>
+                        <div class="text">
+                            <a href="">
+                                <p>Dấu hiệu nhận biết quý nhân bên cạnh bạn: Đó là những người có tầm nhìn dài hạn</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col_mid">
+                        <a href="">
+                            <img src="./assets/upload/b_prominent/anh2.png" alt="">
+                        </a>
+                        <div class="text">
+                            <a href="">
+                                <p>Rapper con nhà giàu, thích ngủ gầm cầu, được vợ kém 10 tuổi cầu hôn là ai?</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col_right">
+                        <a href="">
+                            <img src="./assets/upload/b_prominent/anh3.png" alt="">
+                        </a>
+                        <div class="text">
+                            <a href="">
+                                <p>Những chuẩn bị của "nhà leo núi" Phú Yên trước trận chung kết năm Olympia</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="b_bottom d-flex justify-content-between">
+                    <div class="col_left">
+                        <a href="">
+                            <img src="./assets/upload/b_prominent/anh4.png" alt="">
+                        </a>
+                        <div class="text">
+                            <a href="">
+                                <p>100% học sinh Việt được cử đi thi Olympic quốc tế 2024 đều đoạt giải</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col_mid  d-flex justify-content-between">
+                        <div class="col_mid__l">
+                            <a href="">
+                                <img src="./assets/upload/b_prominent/anh5.png" alt="">
+                            </a>
+                            <div class="text">
+                                <a href="">
+                                    <p>Cha mẹ nào làm được 3 điều này thì con cái hết mực kính trọng, tuổi già sống hạnh
+                                        phúc, yên vui</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col_mid__r">
+                            <a href="">
+                                <img src="./assets/upload/b_prominent/anh6.png" alt="">
+                            </a>
+                            <div class="text">
+                                <a href="">
+                                    <p>2 món ăn và 3 động tác giúp trẻ cao lớn nhanh, cha mẹ nên làm cho con mỗi ngày
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col_right">
+                        <a href="">
+                            <img src="./assets/upload/b_prominent/anh7.png" alt="">
+                        </a>
+                        <div class="text">
+                            <a href="">
+                                <p>Giáo dục con bằng hành vi... cấu, nữ MC bị chuyên gia giáo dục chỉ trích</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="b_search d-flex justify-content-between align-items-center">
+                    <div class="groupTitleIcon d-flex justify-content-between">
+                        <div class="search_title">
+                            <p>&#x2605; TOP</p>
+                            <p>TIÊU ĐIỂM</p>
+                        </div>
+                        <div class="pre-angle-icon"><i class="fa-solid fa-angle-left"></i></div>
+                    </div>
+
+                    <div class="owl-carousel owl-1">
+                        <div class="item">
+                            <a href=""><img src="./assets/upload/b_prominent/b_search/anh1.png" alt=""></a>
+                            <p>#Tết Giáp Thìn 2024</p>
+                        </div>
+                        <div class="item">
+                            <a href=""><img src="./assets/upload/b_prominent/b_search/anh2.png" alt=""></a>
+                            <p>#Tết Giáp Thìn 2024</p>
+                        </div>
+                        <div class="item">
+                            <a href=""><img src="./assets/upload/b_prominent/b_search/anh3.png" alt=""></a>
+                            <p>#Tết Giáp Thìn 2024</p>
+                        </div>
+                        <div class="item">
+                            <a href=""><img src="./assets/upload/b_prominent/b_search/anh4.png" alt=""></a>
+                            <p>#Tết Giáp Thìn 2024</p>
+                        </div>
+                        <div class="item">
+                            <a href=""><img src="./assets/upload/b_prominent/b_search/anh5.png" alt=""></a>
+                            <p>#Tết Giáp Thìn 2024</p>
+                        </div>
+                        <div class="item">
+                            <a href=""><img src="./assets/upload/b_prominent/b_search/anh6.png" alt=""></a>
+                            <p>#Tết Giáp Thìn 2024</p>
+                        </div>
+                        <div class="item">
+                            <a href=""><img src="./assets/upload/b_prominent/b_search/anh7.png" alt=""></a>
+                            <p>#Tết Giáp Thìn 2024</p>
+                        </div>
+                        <div class="item">
+                            <a href=""><img src="./assets/upload/b_prominent/b_search/anh4.png" alt=""></a>
+                            <p>#Tết Giáp Thìn 2024</p>
+                        </div>
+                        <div class="item">
+                            <a href=""><img src="./assets/upload/b_prominent/b_search/anh2.png" alt=""></a>
+                            <p>#Tết Giáp Thìn 2024</p>
+                        </div>
+                    </div>
+                    <div class="next-angle-icon d-flex justify-content-between"><i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="b_prominent container px-0">
+                <div class="row">
+                    <div class="col_left col-lg-4">
+                        <a href="">
+                            <img src="./assets/upload/b_prominent/anh8.png" alt="">
+                        </a>
+                        <p class="note">Nhịp sống trẻ</p>
+                        <a href="">
+                            <p class="title-news">10 câu nói cha mẹ tâm lý rất nên nói với con</p>
+                        </a>
+                    </div>
+                    <div class="col_mid col-lg-4">
+                        <a href="">
+                            <img src="./assets/upload/b_prominent/anh10.png" alt="">
+                        </a>
+                        <p class="note">Nhịp sống trẻ</p>
+                        <a href="">
+                            <p class="title-news">Mỹ nhân vừa học thạc sĩ tại Đại học Oxford, vừa gây dựng gia
+                                sản kếch
+                                xù</p>
+                        </a>
+                    </div>
+                    <div class="col_right col-lg-4">
+                        <a href="">
+                            <img src="./assets/upload/b_prominent/anh12.png" alt="">
+
+                        </a>
+                        <p class="note">Nhịp sống trẻ</p>
+                        <a href="">
+                            <p class="title-news">Bộ đề xuất chỉ thi 3 môn vào lớp 10, bốc thăm môn thứ 3</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col_left col-lg-4">
+                        <a href="">
+                            <img src="./assets/upload/b_prominent/anh9.png" alt="">
+                        </a>
+                        <p class="note">Nhịp sống trẻ</p>
+                        <a href="">
+                            <p class="title-news">Thành tích "khủng" của 11 tân sinh viên Trường Đại học Sư phạm Hà
+                                Nội
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col_mid col-lg-4">
+                        <a href="">
+                            <img src="./assets/upload/b_prominent/anh11.png" alt="">
+                        </a>
+                        <p class="note">Nhịp sống trẻ</p>
+                        <a href="">
+                            <p class="title-news">Sẽ trả lại những khoản thu "lạ" cho phụ huynh học sinh</p>
+                        </a>
+                    </div>
+                    <div class="col_right col-lg-4">
+                        <a href="">
+                            <img src="./assets/upload/b_prominent/anh13.png" alt="">
+                        </a>
+                        <p class="note">Nhịp sống trẻ</p>
+                        <a href="">
+                            <p class="title-news">Phụ huynh xông vào lớp đánh 2 học sinh bị phạt 8 triệu đồng</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="b_edu-news container px-0">
+                <div class="news-info">
+                    <div class="news-head">
+                        <p>TIN GIÁO DỤC</p>
+                    </div>
+                    <div class="news-content">
+                        <div class="row">
+                            <div class="col-lg-6 col_left">
+                                <a href="">
+                                    <img src="./assets/upload/b_edu-news/anh1.png" alt="">
+                                    <div class="text">
+                                        <p>Phân biệt đối xử khi khen học sinh ủng hộ đồng bào miền Bắc, gây bất
+                                            bình:
+                                            Trường nói gì?</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col_mid">
+                                <a href="" class="d-flex justify-content-between">
+                                    <img src="./assets/upload/b_edu-news/anh2.png" alt="">
+                                    <div class="text">
+                                        <p>Con muốn sắm điện thoại bằng bạn bằng bè, cha mẹ phải làm gì?</p>
+                                    </div>
+                                </a>
+                                <a href="" class="d-flex justify-content-between">
+                                    <img src="./assets/upload/b_edu-news/anh3.png" alt="">
+                                    <div class="text">
+                                        <p>Quản lý học sinh dùng điện thoại: Phụ huynh cần chủ động hơn</p>
+                                    </div>
+                                </a>
+                                <a href="" class="d-flex justify-content-between">
+                                    <img src="./assets/upload/b_edu-news/anh4.png" alt="">
+                                    <div class="text">
+                                        <p>Bỏ đề xuất quy định học sinh, sinh viên làm thêm không quá 24h/tuần</p>
+                                    </div>
+                                </a>
+                                <a href="" class="d-flex justify-content-between">
+                                    <img src="./assets/upload/b_edu-news/anh5.png" alt="">
+                                    <div class="text">
+                                        <p>Sinh viên ĐH Duy Tân vào Chung kết thế giới ROBOG 2-2025 tại Trung Quốc
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col_right">
+                                <a href="" class="d-flex justify-content-between">
+                                    <img src="./assets/upload/b_edu-news/anh6.png" alt="">
+                                    <div class="text">
+                                        <p>Dạy tiếng Anh như ngôn ngữ thứ hai: Mục tiêu cao nhưng thách thức lớn</p>
+                                    </div>
+                                </a>
+                                <a href="" class="d-flex justify-content-between">
+                                    <img src="./assets/upload/b_edu-news/anh7.png" alt="">
+                                    <div class="text">
+                                        <p>Dẹp những cái 'mỏ hỗn' trên mạng xã hội, cách nào?</p>
+                                    </div>
+                                </a>
+                                <a href="" class="d-flex justify-content-between">
+                                    <img src="./assets/upload/b_edu-news/anh8.png" alt="">
+                                    <div class="text">
+                                        <p>Những lớp học tạm bằng bạt của trẻ thơ sau sạt lở kinh hoàng</p>
+                                    </div>
+                                </a>
+                                <a href="" class="d-flex justify-content-between">
+                                    <img src="./assets/upload/b_edu-news/anh9.png" alt="">
+                                    <div class="text">
+                                        <p>Hai đại học lớn tại Úc sáp nhập, hướng tới mở rộng quan hệ với Việt Nam
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b_edu-cons-news container px-0">
+                <div class="news-info">
+                    <div class="news-head">
+                        <p>GIÁO DỤC THỂ CHẤT</p>
+                    </div>
+                    <div class="news-content">
+                        <div class="row">
+                            <div class="col-lg-6 col_left">
+                                <a href="">
+                                    <img src="./assets/upload/b_edu-cons-news/anh1.png" alt="">
+                                    <div class="text">
+                                        <p>Sức khoẻ học đường với chất lượng học tập của học sinh phổ thông</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col_mid">
+                                <a href="" class="d-flex justify-content-between">
+                                    <img src="./assets/upload/b_edu-cons-news/anh2.png" alt="">
+                                    <div class="text">
+                                        <p>Thế hệ Z - những công dân nổi trội thời đại kỹ thuật số</p>
+                                    </div>
+                                </a>
+                                <a href="" class="d-flex justify-content-between">
+                                    <img src="./assets/upload/b_edu-cons-news/anh3.png" alt="">
+                                    <div class="text">
+                                        <p>Nữ sinh lo phải ra nước ngoài kiếm tiền từ nghề bị ví "giỏi nói đạo lý"
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="" class="d-flex justify-content-between">
+                                    <img src="./assets/upload/b_edu-cons-news/anh4.png" alt="">
+                                    <div class="text">
+                                        <p>Tân sinh viên sốc khi bạn trọ ở bẩn, hát đến 2h sáng</p>
+                                    </div>
+                                </a>
+                                <a href="" class="d-flex justify-content-between">
+                                    <img src="./assets/upload/b_edu-cons-news/anh5.png" alt="">
+                                    <div class="text">
+                                        <p>Bốn ứng viên "đỉnh của chóp" tranh tài chung kết năm Đường lên đỉnh
+                                            Olympia
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col_right">
+                                <a href="" class="d-flex justify-content-between">
+                                    <img src="./assets/upload/b_edu-cons-news/anh6.png" alt="">
+                                    <div class="text">
+                                        <p>Bài dự thi "Sức khoẻ học đường" - những lưu ý quan trọng</p>
+                                    </div>
+                                </a>
+                                <a href="" class="d-flex justify-content-between">
+                                    <img src="./assets/upload/b_edu-cons-news/anh7.png" alt="">
+                                    <div class="text">
+                                        <p>Thi đánh giá năng lực HSA: Tổ hợp nào có lợi thế xét tuyển đại học 2025?
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="" class="d-flex justify-content-between">
+                                    <img src="./assets/upload/b_edu-cons-news/anh8.png" alt="">
+                                    <div class="text">
+                                        <p>Bài thơ "Tiếng hạt nảy mầm" bị chê thậm tệ, nhà văn khóc nghẹn</p>
+                                    </div>
+                                </a>
+                                <a href="" class="d-flex justify-content-between">
+                                    <img src="./assets/upload/b_edu-cons-news/anh9.png" alt="">
+                                    <div class="text">
+                                        <p>Điều cha mẹ nên làm ngay khi con hay lo lắng, căng thẳng?</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b_edu-skills container px-0">
+                <div class="news-info">
+                    <div class="news-head">
+                        <p>GIÁO DỤC KĨ NĂNG</p>
+                    </div>
+                    <div class="news-content">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <a href=""><img src="./assets/upload/b_edu-skills/anh1.png" alt=""></a>
+                                    <div class="card-body">
+                                        <p class="note">Nhịp sống trẻ</p>
+                                        <a href="">
+                                            <p class="title-news">Chàng trai nhiều sáng chế khởi nghiệp khi còn là sinh
+                                                viên
+                                            </p>
+                                        </a>
+                                        <p class="news-describe">Nhờ bắt đầu khởi nghiệp khi còn là sinh viên, bây
+                                            giờ
+                                            là Lê Văn.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <a href=""><img src="./assets/upload/b_edu-skills/anh1.png" alt=""></a>
+                                    <div class="card-body">
+                                        <p class="note">Nhịp sống trẻ</p>
+                                        <a href="">
+                                            <p class="title-news">Chàng trai nhiều sáng chế khởi nghiệp khi còn là sinh
+                                                viên
+                                            </p>
+                                        </a>
+                                        <p class="news-describe">Nhờ bắt đầu khởi nghiệp khi còn là sinh viên, bây
+                                            giờ
+                                            là Lê Văn.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <a href=""><img src="./assets/upload/b_edu-skills/anh1.png" alt=""></a>
+                                    <div class="card-body">
+                                        <p class="note">Nhịp sống trẻ</p>
+                                        <a href="">
+                                            <p class="title-news">Chàng trai nhiều sáng chế khởi nghiệp khi còn là sinh
+                                                viên
+                                            </p>
+                                        </a>
+                                        <p class="news-describe">Nhờ bắt đầu khởi nghiệp khi còn là sinh viên, bây
+                                            giờ
+                                            là Lê Văn.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b_connect container px-0 ">
+                <div class="news-info">
+                    <div class="news-head">
+                        <p>TRAO ĐỔI KẾT NỐI</p>
+                    </div>
+                    <div class="news-content">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <a href=""><img src="./assets/upload/b_connect/anh1.png" alt=""></a>
+                                <ul>
+                                    <li><a href="">Phụ huynh Hà Nội tìm sự giúp đỡ từ hơn 300 nghìn người vì khuyên
+                                            con
+                                            1 điều mà nhận về câu nói: "Mẹ lừa con à"</a></li>
+                                    <li><a href="">Dạy con "độc lạ" như ca sĩ Mỹ Linh, làm gương cho con theo cách
+                                            không
+                                            ai ngờ tới!</a></li>
+                                    <li><a href="">Phân biệt đối xử khi khen học sinh ủng hộ đồng bào miền Bắc, gây
+                                            bất
+                                            bình: Trường nói gì?</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href=""><img src="./assets/upload/b_connect/anh2.png" alt=""></a>
+                                <ul>
+                                    <li><a href="">Con bị đánh, cha vào lớp học đánh học sinh lớp 8</a></li>
+                                    <li><a href="">Dạy con "độc lạ" như ca sĩ Mỹ Linh, làm gương cho con theo cách
+                                            không
+                                            ai ngờ tới!</a></li>
+                                    <li><a href="">Phân biệt đối xử khi khen học sinh ủng hộ đồng bào miền Bắc, gây
+                                            bất
+                                            bình: Trường nói gì?</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href=""><img src="./assets/upload/b_connect/anh3.png" alt=""></a>
+                                <ul>
+                                    <li><a href="">Cha mẹ nào làm được 3 điều này thì con cái hết mực kính trọng,
+                                            tuổi
+                                            già sống hạnh phúc, yên vui</a></li>
+                                    <li><a href="">Dạy con "độc lạ" như ca sĩ Mỹ Linh, làm gương cho con theo cách
+                                            không
+                                            ai ngờ tới!</a></li>
+                                    <li><a href="">Phân biệt đối xử khi khen học sinh ủng hộ đồng bào miền Bắc, gây
+                                            bất
+                                            bình: Trường nói gì?</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b_entertai container px-0">
+                <div class="row">
+                    <div class="col-lg-4 col_left">
+                        <div class="news-info">
+                            <div class="news-head">
+                                <p>HỌC TẬP NGOẠI KHÓA</p>
+                            </div>
+                            <div class="news-content">
+                                <a href=""><img src="./assets/upload/b_entertai/anh1.png" alt=""></a>
+                                <ul>
+                                    <li><a href="">Mới 35 tuổi, sao Việt này đã lập di chúc cho con: Đọc tới đâu
+                                            thấy
+                                            ngạc nhiên, ngưỡng mộ tới đó</a></li>
+                                    <li><a href="">Dạy con "độc lạ" như ca sĩ Mỹ Linh, làm gương cho con theo cách
+                                            không
+                                            ai ngờ tới!</a></li>
+                                    <li><a href="">Phân biệt đối xử khi khen học sinh ủng hộ đồng bào miền Bắc, gây
+                                            bất
+                                            bình: Trường nói gì?</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col_mid">
+                        <div class="news-info">
+                            <div class="news-head">
+                                <p>VĂN HÓA</p>
+                            </div>
+                            <div class="news-content">
+                                <a href=""><img src="./assets/upload/b_entertai/anh2.png" alt=""></a>
+                                <ul>
+                                    <li><a href="">Thành công rực rỡ của Đoàn Việt Nam tại Liên hoan Nghệ thuật Quốc
+                                            tế
+                                            Vienna 2024</a></li>
+                                    <li><a href="">Dạy con "độc lạ" như ca sĩ Mỹ Linh, làm gương cho con theo cách
+                                            không
+                                            ai ngờ tới!</a></li>
+                                    <li><a href="">Phân biệt đối xử khi khen học sinh ủng hộ đồng bào miền Bắc, gây
+                                            bất
+                                            bình: Trường nói gì?</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col_right">
+                        <div class="news-info">
+                            <div class="news-head">
+                                <p>NHỊP ĐIỆU CUỘC SỐNG</p>
+                            </div>
+                            <div class="news-content">
+                                <a href=""><img src="./assets/upload/b_entertai/anh3.png" alt=""></a>
+                                <ul>
+                                    <li><a href="">Đâu là nơi nguy hiểm nhất trong lịch sử Trái Đất?</a></li>
+                                    <li><a href="">Dạy con "độc lạ" như ca sĩ Mỹ Linh, làm gương cho con theo cách
+                                            không
+                                            ai ngờ tới!</a></li>
+                                    <li><a href="">Phân biệt đối xử khi khen học sinh ủng hộ đồng bào miền Bắc, gây
+                                            bất
+                                            bình: Trường nói gì?</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b_media container px-0">
+                <div class="news-info">
+                    <div class="news-head">
+                        <p>ĐA PHƯƠNG TIỆN</p>
+                    </div>
+                    <div class="news-content">
+                        <div class="row">
+                            <div class="owl-carousel owl-2">
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh1.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thời điểm uống nước giúp tăng hiệu quả giảm cân, đốt mỡ</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh2.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thư Kỳ tuổi 50 khiến fan 'xốn xang' vì đẹp</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh3.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Cách diện sơ mi trắng 'ăn gian' tuổi của tổng tài Trần Hùng Huy</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh4.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Ảnh sao 25/9: Midu được khen xinh như công chúa</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh5.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Ảnh sao 25/9: Midu được khen xinh như công chúa</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh6.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thức uống buổi sáng giúp tăng hiệu quả đốt mỡ cả ngày</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh2.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thư Kỳ tuổi 50 khiến fan 'xốn xang' vì đẹp</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh1.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thư Kỳ tuổi 50 khiến fan 'xốn xang' vì đẹp</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh5.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thư Kỳ tuổi 50 khiến fan 'xốn xang' vì đẹp</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh1.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thư Kỳ tuổi 50 khiến fan 'xốn xang' vì đẹp</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh2.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thư Kỳ tuổi 50 khiến fan 'xốn xang' vì đẹp</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh6.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thư Kỳ tuổi 50 khiến fan 'xốn xang' vì đẹp</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh3.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thư Kỳ tuổi 50 khiến fan 'xốn xang' vì đẹp</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh4.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thư Kỳ tuổi 50 khiến fan 'xốn xang' vì đẹp</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh1.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thư Kỳ tuổi 50 khiến fan 'xốn xang' vì đẹp</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh3.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thư Kỳ tuổi 50 khiến fan 'xốn xang' vì đẹp</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh4.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thư Kỳ tuổi 50 khiến fan 'xốn xang' vì đẹp</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh6.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thư Kỳ tuổi 50 khiến fan 'xốn xang' vì đẹp</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh2.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thư Kỳ tuổi 50 khiến fan 'xốn xang' vì đẹp</p>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="">
+                                        <div class="vid">
+                                            <div class="bg_img"></div>
+                                            <img src="./assets/upload/b_media/anh5.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <p>Thư Kỳ tuổi 50 khiến fan 'xốn xang' vì đẹp</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b_video container px-0">
+                <div class="news-info">
+                    <div class="news-head">
+                        <p>VIDEO</p>
+                    </div>
+                    <div class="news-content d-flex">
+                        <div class="bg_img"></div>
+                        <img src="./assets/upload/b_video/anh1.png" alt="">
+                        <div class="group-vid d-flex justify-content-around">
+                            <div class="group-vidInfo">
+                                <a href="">
+                                    <i class="fa-solid fa-play"></i>
+                                    <div class="vid-title">
+                                        <p>Cô giáo bỏ dở bữa trưa, đánh thức hơn 200 học sinh thoát thảm họa sạt lở
+                                        </p>
+                                    </div>
+                                </a>
+                                <button><a href=""><i class="fa-solid fa-play"></i>&nbsp;&nbsp;&nbsp;Xem
+                                        video</a></button>
+                            </div>
+                            <div class="other-vid">
+                                <div class="other-vidTitle d-flex justify-content-between">
+                                    <p>XEM VIDEO TIẾP</p>
+                                    <div class="d-flex justify-content-between" style="width: 70px;"><i
+                                            class="fa-solid fa-angle-left"></i><i class="fa-solid fa-angle-right"></i>
+                                    </div>
+                                </div>
+                                <div class="other-vid-1">
+                                    <div>
+                                        <a href="">
+                                            <img src="./assets/upload/b_video/anh2.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                            <div class="vid-title">
+                                                <p>Nhân sự GenZ: Nỗi lo ngại của doanh nghiệp hay luồng gió mới?</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="other-vid-2">
+                                    <div>
+                                        <a href="">
+                                            <img src="./assets/upload/b_video/anh3.png" alt="">
+                                            <i class="fa-solid fa-play"></i>
+                                            <div class="vid-title">
+                                                <p>5 việc giúp sinh viên có những năm tháng ý nghĩa ở trường đại học
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b_image container px-0">
+                <img src="./assets/img/image.png" alt="">
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container-fluid f-row-1">
+                <div class="container px-0">
+                    <ul class="f_nav d-flex justify-content-between">
+                        <i class="fa-solid fa-house"></i>
+                        <li><a href="" class="n-item" style="color: #FF3333;">Tin giáo dục</a></li>
+                        <li><a href="" class="n-item" style="color: #1B75BC;">Giáo dục thể chất</a></li>
+                        <li><a href="" class="n-item" style="color: #E6B300;">Giáo dục kĩ năng</a></li>
+                        <li><a href="" class="n-item" style="color: #00BA36;">Trao đổi - kết nối</a></li>
+                        <li><a href="" class="n-item" style="color: #10A5E8;">Học tập ngoại khóa</a></li>
+                        <li><a href="" class="n-item" style="color: #0D0898;">Văn hóa</a></li>
+                        <li><a href="" class="n-item" style="color: #890CC2;">Nhịp điệu cuộc sống</a></li>
+                        <li><a href="" class="n-item"><i class="fa-solid fa-star"></i>Đa phương tiện</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container px-0 f-info">
+                <div class="f-info-image">
+                    <img src="./assets/img/Logo.png" alt="">
+                </div>
+                <div class="div d-flex justify-content-between">
+                    <div class="f-infoName">
+                        <ul>
+                            <p>CẦU VỒNG TUỔI THƠ <br>TRANG THÔNG TIN ĐIỆN TỬ TỔNG HỢP</p>
+                            <li>Giấy phép thiết lập</li>
+                            <li>Trang thông tin điện tử tổng hợp</li>
+                            <li>Sổ xxx do Sở thông tin & Truyền thông</li>
+                            <li>Thành phố Hà Nội cấp ngày xxx</li>
+                        </ul>
+                    </div>
+                    <div class="f-address">
+                        <ul>
+                            <li>Email: <br>Cauvongtuoitho.gdtd@gmail.com</li>
+                            <li>Địa chỉ: <br>Số 5 Ngõ 1194/61/2 Đường Láng, Phường Láng Thượng, Quận Đống Đa, Thành
+                                phố
+                                Hà Nội, Việt Nam</li>
+                        </ul>
+                    </div>
+                    <div class="f-contact">
+                        <ul>
+                            <li>Phụ trách nội dung: <br><b>Ngô Thu Hương</b></li>
+                            <li>Liên hệ quảng cáo</li>
+                            <li><i class="fa-solid fa-phone"></i>086.689.0468</li>
+                        </ul>
+                    </div>
+                    <div class="f-register">
+                        <ul>
+                            <li><b>Đăng ký email</b></li>
+                            <li>Để không bỏ lỡ tin tức & Sự kiện được quan tâm</li>
+                            <div class="input-group mb-4">
+                                <input type="text" class="form-control" placeholder="Email của bạn">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fa-solid fa-paper-plane"></i></span>
+                                </div>
+                            </div>
+                            <input type="text" placeholder="Góp ý cho tòa soạn">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-0 f-footer d-flex justify-content-between">
+                <ul>
+                    <li><a href="">Thông tin liên hệ</a></li>
+                    <li><a href="">Cộng tác</a></li>
+                    <li><a href="">Điều khoản bảo mật</a></li>
+                    <li><a href="">Góp ý</a></li>
+                </ul>
+                <p>POWERED BY ONECMS - A PRODUCT OF NEKO</p>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/web.js"></script>
+</body>
+
+</html>
